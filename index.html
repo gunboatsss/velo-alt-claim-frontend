@@ -35,7 +35,7 @@
             let proof = merkleTree.getProof(generateLeaf(ethers.utils.getAddress(address), ethers.utils.parseUnits(value.toString(), data.decimals)));
             console.log(proof);
             let result = proof.map(x => "0x" + toHex(x.data));
-            document.getElementById("r_address").innerHTML = "On <a href=\"https://optimistic.etherscan.io/address/0x00d59bc35174c3b250dd92a363495d38c8777a49#writeContract/\">Optimistic Etherscan</a> put the following value, address: " + address;
+            document.getElementById("r_address").innerHTML = "On <a href=\"https://optimistic.etherscan.io/address/0x00d59bc35174c3b250dd92a363495d38c8777a49#writeContract/\">Optimistic Etherscan</a> go to write contract, connect your wallet and put the following value, address: " + address;
             document.getElementById("amount").innerHTML = "amount: " + ethers.utils.parseUnits(value.toString(), data.decimals);
             document.getElementById("proof").innerHTML = "proof (bytes32[]): " + JSON.stringify(result).replace(/"/g, '');
         }
